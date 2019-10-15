@@ -22,6 +22,7 @@ import com.hupun.api.domain.TradeStatusInfo;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: Klaus 2019/9/29
@@ -43,7 +44,9 @@ public class GetERPTradeStatusResponse extends BaseResponse<List<TradeStatusInfo
         if (json != null && json.length() > 0) {
             ObjectMapper mapper = new ObjectMapper();
             try {
-                statuses = mapper.readValue(json, new TypeReference<List<TradeStatusInfo>>(){});
+                Map<String, List> data = mapper.readValue(json, Map.class);
+                String s = mapper.writeValueAsString(data.get("statuses"));
+                statuses = mapper.readValue(s, new TypeReference<List<TradeStatusInfo>>(){});
             } catch (IOException e) {
                 e.printStackTrace();
             }

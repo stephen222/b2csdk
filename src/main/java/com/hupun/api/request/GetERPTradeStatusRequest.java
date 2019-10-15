@@ -85,6 +85,6 @@ public class GetERPTradeStatusRequest implements BaseRequest<GetERPTradeStatusRe
         params.put("shop_type", shopType);
         params.put("shop_nick", shopNick);
         params.put("trade_ids", tradeIDs);
-        return null;
+        return params;
     }
 }
