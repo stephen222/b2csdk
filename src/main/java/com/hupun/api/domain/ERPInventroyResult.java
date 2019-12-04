@@ -25,9 +25,9 @@ public class ERPInventroyResult {
     /** ERP中的仓库名称*/
     private String storage_name;
     /** 该仓库的可用库存*/
-    private int available;
+    private double available;
     /** 该仓库的实际库存*/
-    private int quantity;
+    private double quantity;
     /** 关联的线上商品编号*/
     private String oln_item_id;
     /** 关联的线上规格编号*/
@@ -39,7 +39,7 @@ public class ERPInventroyResult {
     /** 最近库存变动时间*/
     private String modified;
     /** 批次号*/
-    private List<String> batchs;
+    private List<InventoryBatch> batchs;
 
 
     public String getStorage_code() {
@@ -56,22 +56,6 @@ public class ERPInventroyResult {
 
     public void setStorage_name(String storage_name) {
         this.storage_name = storage_name;
-    }
-
-    public int getAvailable() {
-        return available;
-    }
-
-    public void setAvailable(int available) {
-        this.available = available;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public String getOln_item_id() {
@@ -114,11 +98,27 @@ public class ERPInventroyResult {
         this.modified = modified;
     }
 
-    public List<String> getBatchs() {
+    public List<InventoryBatch> getBatchs() {
         return batchs;
     }
 
-    public void setBatchs(List<String> batchs) {
+    public void setBatchs(List<InventoryBatch> batchs) {
         this.batchs = batchs;
+    }
+
+    public double getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(double available) {
+        this.available = available;
+    }
+
+    public double getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
     }
 }
