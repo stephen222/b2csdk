@@ -131,7 +131,7 @@ public class B2CTrade implements Serializable {
     @ApiField(value = "快递单号")
     private String expressCode;
 
-    @ApiField(value = "省份证上的名称")
+    @ApiField(value = "身份证上的名称")
     private String identityName;
     @ApiField(value = "订购人手机")
     private String buyerMobile;
@@ -139,6 +139,8 @@ public class B2CTrade implements Serializable {
     private String receiverCountry;
     @ApiField(value = "金额币种")
     private String currencyCode;
+    @ApiField(value = "期望送达时间段: 2019-11-21 15:30-16:00")
+    private String expectTime;
 
     public String getTradeID() {
         return tradeID;
@@ -451,5 +453,13 @@ public class B2CTrade implements Serializable {
 
     public void setCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
+    }
+
+    public String getExpectTime() {
+        return expectTime;
+    }
+
+    public void setExpectTime(String expectTime) {
+        this.expectTime = expectTime;
     }
 }

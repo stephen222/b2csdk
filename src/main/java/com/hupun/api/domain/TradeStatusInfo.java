@@ -55,6 +55,16 @@ public class TradeStatusInfo {
      * 122：商家自送（门店配送）*/
     private String shippingType;
 
+    /**
+     * 系统单号
+     */
+    private String tradeNo;
+
+    /**
+     * 系统快递编码
+     */
+    private String express_local;
+
     public String getTid() {
         return tid;
     }
@@ -109,5 +119,21 @@ public class TradeStatusInfo {
 
     public void setShippingType(String shippingType) {
         this.shippingType = shippingType;
+    }
+
+    public String getTradeNo() {
+        return tradeNo;
+    }
+
+    public void setTradeNo(String tradeNo) {
+        this.tradeNo = tradeNo;
+    }
+
+    public String getExpress_local() {
+        return express_local;
+    }
+
+    public void setExpress_local(String express_local) {
+        this.express_local = express_local;
     }
 }
