@@ -29,17 +29,17 @@ import java.util.Map;
  */
 public class GetERPTradeStatusRequest implements BaseRequest<GetERPTradeStatusResponse>{
     @RequiredField(value = "线上订单号，多个订单以半角逗号相隔，如”123,456”，最多支持200个订单号")
-    private String[] tradeIDs;
+    private String tradeIDs;
     @RequiredField(value = "店铺类型，B2C平台：100")
     private int shopType = 100;
     @RequiredField(value = "店铺昵称，必须和商品推送中的店铺昵称相同")
     private String shopNick;
 
-    public String[] getTradeIDs() {
+    public String getTradeIDs() {
         return tradeIDs;
     }
 
-    public void setTradeIDs(String... tradeIDs) {
+    public void setTradeIDs(String tradeIDs) {
         this.tradeIDs = tradeIDs;
     }
 
